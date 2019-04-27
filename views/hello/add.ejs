@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <head>
+        <h1><%= title %></h1>
+    </head>
+    <div role="main">
+        <p><%= content %></p>
+        <form action="/hello/add" method="POST">
+            <table>
+                <tr>
+                    <th>artist</th>
+                    <td><input type="text" name="artist"></td>
+                </tr>
+                <tr>
+                    <th>profile</th>
+                    <td><input type="text" name="profile"></td>
+                </tr>
+                <tr>
+                    <th>place</th>
+                    <td><input type="text" name="place"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="作成"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
