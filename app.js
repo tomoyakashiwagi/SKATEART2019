@@ -16,6 +16,7 @@ var pickup = require('./routes/pickup');
 var shop = require('./routes/shop');
 var artist = require('./routes/artist');
 var login = require('./routes/login');
+var home = require('./routes/home');
 
 var app = express();
 
@@ -48,7 +49,7 @@ app.use('/pickup', pickup);
 app.use('/shop', shop);
 app.use('/artist', artist);
 app.use('/login', login);
-
+app.use('/home', home);
 
 app.use(express.static('routes'));
 // catch 404 and forward to error handler
