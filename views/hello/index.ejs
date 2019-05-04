@@ -3,21 +3,31 @@
 
 <head>
     <title>Index</title>
-    <link rel='stylesheet' href='/public/stylesheets/style.css'>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
 </head>
 
 <body>
 
     <head>
-        <h1>Index</h1>
+        <h1><%=title%></h1>
     </head>
     <div role="main">
         <table>
+            <% for (var i in content) {%>
             <tr>
-                <% =content%>
+                <% var obj=content[i].attributes;%>
+                <th><%=obj.id%></th>
+                <th><%=obj.mail%></th>
+                <th><%=obj.language%></th>
+                <th><%=obj.country%></th>
+                <th><%=obj.address%></th>
             </tr>
+            <%}%>
         </table>
     </div>
+
+
+
 </body>
 
 </html>

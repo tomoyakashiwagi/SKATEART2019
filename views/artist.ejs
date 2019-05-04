@@ -8,6 +8,27 @@
 
 <body>
 
+    <head>
+        <h1><%= title %></h1>
+    </head>
+
+
+
+
+    <div role="main">
+        <% for (var i in content) {%>
+        <% var obj=content[i];%>
+        <p>ID:</p>
+        <p><%=obj.id%></p>
+        <p>artist:<%=obj.artist%></p>
+        <p>profile:<%=obj.profile%></p>
+        <p>place:<%=obj.place%></p>
+        <p>facebook:<%=obj.facebook%></p>
+        <p>twitter:<%=obj.twitter%></p>
+        <p>instagram:<%=obj.instagram%></p>
+        <%}%>
+    </div>
+
 
 
 </body>

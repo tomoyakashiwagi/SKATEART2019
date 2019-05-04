@@ -14,27 +14,28 @@
     </head>
     <div role="main">
         <p><%- content %></p>
-        <form action="/hello/add" method="POST">
+        <form action="/hello/edit" method="post">
+            <input type="hidden" name="id" value="<%= user.id%>">
             <table>
                 <tr>
                     <th>E-Mail</th>
-                    <td><input type="text" name="mail" value="<%= form.mail%>"></td>
+                    <td><input type="text" name="mail" value="<%= user.mail %>"></td>
                 </tr>
                 <tr>
-                    <th>language</th>
-                    <td><input type="text" name="language" value="<%= form.language%>"></td>
+                    <th>Language</th>
+                    <td><input type="text" name="language" value="<%= user.language %>"></td>
                 </tr>
                 <tr>
-                    <th>country</th>
-                    <td><input type="text" name="country" value="<%= form.country%>"></td>
+                    <th>Country</th>
+                    <td><input type="text" name="country" value="<%= user.country %>"></td>
                 </tr>
                 <tr>
-                    <th>address</th>
-                    <td><input type="text" name="address" value="<%= form.address%>"></td>
+                    <th>Address</th>
+                    <td><input type="text" name="address" value="<%= user.address %>"></td>
                 </tr>
                 <tr>
                     <th></th>
-                    <td><input type="submit" value="作成"></td>
+                    <td><input type="submit" value="更新"></td>
                 </tr>
             </table>
         </form>

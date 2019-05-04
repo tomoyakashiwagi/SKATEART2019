@@ -13,15 +13,19 @@
         <h1><%= title %></h1>
     </head>
     <div role="main">
-        <table><%=for(var i in content){ %>
+        <table>
+            <% for (var i in content) {%>
             <tr>
                 <% var obj=content[i];%>
                 <th><%=obj.id%></th>
-                <th><%=obj.name%></th>
-                <th><%=obj.mail%></th>
-                <th><%=obj.age%></th>
-
+                <th><%=obj.title%></th>
+                <th><%=obj.data%></th>
+                <th><%=obj.material%></th>
+                <th><%=obj.size%></th>
+                <th><%=obj.price%></th>
+                <th><%=obj.shop%></th>
             </tr>
+            <%}%>
         </table>
     </div>
 </body>

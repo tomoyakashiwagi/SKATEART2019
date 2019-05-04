@@ -17,10 +17,10 @@ router.get('/', (req, res, next) => {
     //データを取り出す
     connection.query('SELECT * FROM artwork',
         //コールバック関数でデータを取得
-        function (error, results, fields) {
+        function (error, results) {
             if (error == null) {
-                var data = { title: 'artwork', content: results };
-                res.json(data);
+                var data = { title: 'Artwork', content: results };
+                res.render('artwork', data);
             }
         });
     //接続を解除する

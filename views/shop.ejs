@@ -4,7 +4,6 @@
 <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-
 </head>
 
 <body>
@@ -13,17 +12,29 @@
         <h1><%= title %></h1>
     </head>
     <div role="main">
-        <table><%=for(var i in content){ %>
+        <table>
+            <% for (var i in content) {%>
             <tr>
                 <% var obj=content[i];%>
                 <th><%=obj.id%></th>
-                <th><%=obj.name%></th>
-                <th><%=obj.mail%></th>
-                <th><%=obj.age%></th>
-
+                <th><%=obj.shop%></th>
+                <th><%=obj.location%></th>
+                <th><%=obj.businesshour %></th>
+                <th><%=obj.businesshour2 %></th>
+                <th><%=obj.holiday%></th>
+                <th><%=obj.url%></th>
+                <th><%=obj.address%></th>
+                <th><%=obj.tel%></th>
+                <th><%=obj.facebook%></th>
+                <th><%=obj.twitter%></th>
+                <th><%=obj.instagram%></th>
             </tr>
+            <%}%>
         </table>
     </div>
+
+
+
 </body>
 
 </html>

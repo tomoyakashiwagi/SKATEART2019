@@ -17,12 +17,13 @@ router.get('/', (req, res, next) => {
     //データを取り出す
     connection.query('SELECT * FROM event',
         //コールバック関数でデータを取得
-        function (error, results, fields) {
+        function (error, results) {
             if (error == null) {
-                var data = { title: 'EVENT', content: results };
-                res.json(data);
-            }
+                var data = { title: 'Event', content: results };
+                res.render('event', data);
+            };
         });
+
     //接続を解除する
     connection.end();
 });

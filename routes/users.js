@@ -19,8 +19,8 @@ router.get('/', (req, res, next) => {
     //コールバック関数でデータを取得
     function (error, results) {
       if (error == null) {
-        var data = { title: 'USER', content: results };
-        res.json(data);
+        var data = { title: 'User', content: results };
+        res.render('user', data);
       };
     });
 

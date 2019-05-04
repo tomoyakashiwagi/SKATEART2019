@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+
+    <head>
+        <h1><%= title %></h1>
+    </head>
+    <div role="main">
+        <p><%- content %></p>
+        <% if (user != null){ %>
+        <p>
+            <ul>
+                <li><%- user.id %></li>
+                <li><%- user.attributes.mail %></li>
+                <li><%- user.attributes.language %></li>
+                <li><%- user.attributes.country %></li>
+                <li><%- user.attributes.address + ' に住んでいます。' %></li>
+            </ul>
+        </p>
+        <% } %>
+        <form method="post" action="/hello/find">
+            <table>
+                <tr>
+                    <th>NAME</th>
+                    <td><input type="text" name="fstr" value="<%= form.fstr %>"></td>
+                </tr>
+                <tr>
+                    <th></th>
+                    <td><input type="submit" value="検索"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

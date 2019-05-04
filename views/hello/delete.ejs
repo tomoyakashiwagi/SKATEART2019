@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta http-equiv="content-type" content=text/html; charset="UTF-8">
+    <title>this is<%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+</head>
+
+<body>
+
+    <head>
+        <h1><%= title %></h1>
+    </head>
+    <div role="main">
+        <p><%= content %></p>
+
+        <table>
+            <tr>
+                <th>E-Mail</th>
+                <td><%= user.mail %></td>
+            </tr>
+            <tr>
+                <th>Language</th>
+                <td><%= user.language %></td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td><%= user.country %></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td><%= user.address %></td>
+            </tr>
+            <tr>
+                <th></th>
+                <td></td>
+            </tr>
+        </table>
+        <form action="/hello/delete" method="post">
+            <input type="hidden" name="id" value="<%= user.id %>">
+            <p><input type="submit" value="削除"></p>
+        </form>
+    </div>
+</body>
+
+</html>
